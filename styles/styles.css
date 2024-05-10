@@ -1,0 +1,50 @@
+/** CSS Reset */
+/* You can keep or remove this, if you'd like */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/** You can define your own CSS variables here */
+:root {
+  /** Example: */
+  --main-background: rgb(61, 125, 202);
+}
+
+/** Project styling */
+
+/** Your styles go here */
+
+body {
+  background-color: rgb(255, 231, 253);
+}
+
+#ItunesSearchApp {
+  text-align: center;
+  font-size: 375%;
+}
+
+.ItunesLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  width: 325px;
+}
+
+#SearchForm {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
+
+#InfoSection {
+  border-style: solid;
+  border-color: pink;
+}
