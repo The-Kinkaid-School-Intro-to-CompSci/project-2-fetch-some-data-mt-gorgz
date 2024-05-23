@@ -13,12 +13,10 @@ async function getArtist(){
     catch(error){
         console.log("error", error)
         alert('Artist not found. Please try again.')
-        //eventually clear data
+        
     }
 
     setInformation(artistData);
-    //let infoSection = document.querySelector("#infoSection");
-    //infoSection.textContent = JSON.stringify(artistData.results);
 }
 
 function setInformation(artistData) {
@@ -26,14 +24,17 @@ function setInformation(artistData) {
     artistName.textContent = artistData.results[0].artistName;
 
     const artistLink = document.querySelector("#artistLink");
-    artistLink.textContent = artistData.results[0].artistViewUrl;
-
+    artistLink.textContent = "Link to Artist";
+    artistLink.href = artistData.results[0].artistViewUrl
+    
     const songLink = document.querySelector("#songLink");
-    songLink.textContent = artistData.results[0].trackViewUrl;
+    songLink.textContent = "Link to Song";
+    songLink.href = artistData.results[0].trackViewUrl
 
     const songName = document.querySelector("#songName");
     songName.textContent = artistData.results[0].trackName;
     
+
     const albumName = document.querySelector("#albumName");
     albumName.textContent = artistData.results[0].collectionName;
 
@@ -46,19 +47,13 @@ function setInformation(artistData) {
     let trackTimeSeconds = Math.floor((trackTimeMillis/1000)%60);
     trackTime.textContent = `${trackTimeMinutes}:${trackTimeSeconds}`
     
-
-
-
-
-    
-
-
+    const audioPreview = document.querySelector("#audioPreview");
+    audioPreview.src = artistData.results[0].previewUrl;
 }
+
 function runProgram(){
     console.log('runProgram');
     let submitButton = document.querySelector("#submitButton");
     submitButton.addEventListener('click', getArtist)
-    
-
 }
 document.addEventListener('DOMContentLoaded', runProgram);
