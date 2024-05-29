@@ -3,11 +3,25 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>The name of your website</title> 
-        <link rel="stylesheet" href="styles.css">
+        <title>Music Search App</title> 
+        <link rel="stylesheet" href="styles/styles.css">
         <script type="text/javascript" src="script.js"></script>
     </head>
+    <header>
+        <img class="ItunesLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/ITunes_logo.svg/438px-ITunes_logo.svg.png"></img>
+        <h1 id="ItunesSearchApp">Itunes Search App</h1>
+    </header>
     <body>
-        Your HTML goes here
+        <input id="userInput" type="text" placeholder="Search!">
+        <button id="submitButton">Submit</button>
+        <section id="infoSection"></section>
+            <img id="songCover" src=""></img>
+            <h2 id="artistName"></h2>
+            <h2 id="songName"></h2>
+            <h2 id="albumName"></h2>
+            <a id="artistLink" target="_blank"></a>
+            <a id="songLink" target="_blank"></a>
+            <h2 id="trackTime"></h2>
+            <audio controls autoplay id="audioPreview" src=""></audio>
     </body>
 </html>
